@@ -17,4 +17,4 @@ navigation:
 collections:
   projects:
     output: true
-    permalink: /projects/:name.html
+    permalink: /projects/:name
