@@ -1,0 +1,9 @@
+- title: "ITC6001 – Last.fm Behaviour Analysis"
+  blurb: "Clustering 360 k user–artist interactions, dominant tags & cohorts."
+  path:  "/projects/itc6001"
+
+- title: "ITC6002 – Exploratory Power‑BI Dashboards"
+  blurb: "Advanced Power BI data modelling & storytelling for marketing KPIs."
+  path:  "/projects/itc6002"
+
+# …repeat for remaining seven projects…

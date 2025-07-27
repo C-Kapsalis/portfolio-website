@@ -3,13 +3,10 @@ layout: default
 title: About
 ---
 
-### Who I am  
-Data‑driven marketer specialized in BI & Power BI modelling.  
-Incoming Fulbright MSc Marketing scholar @ Syracuse University.
+### Christoforos Kapsalis  
 
-### What I do  
-- Build dashboards & analytics pipelines that turn raw data into growth decisions.  
-- Marry hard numbers with narrative to drive product & business outcomes.
+Data‑driven marketer specialising in BI & Power BI.  
+Incoming Fulbright MSc Marketing scholar at Syracuse University.
 
-### Contact  
-[LinkedIn](https://www.linkedin.com/in/christoforos-kapsalis/) · ckapsalis@mayainsights.com
+* LinkedIn → <https://www.linkedin.com/in/christoforos-kapsalis/>  
+* Email → ckapsalis@mayainsights.com

@@ -1,6 +1,15 @@
-title:  "Christoforos Kapsalis"
-tagline: "Marketing Analytics • BI • Data Science Projects"
-baseurl: "/portfolio-website"      # <‑‑ keep exactly if repo is portfolio‑website
-theme: minima
+title: "Christoforos Kapsalis"
+tagline: "Marketing Analytics · BI · Fulbright MSc Marketing"
+description: "Graduate‑level data‑science and analytics portfolio"
+baseurl: "/portfolio-website"          # keeps URLs correct for project pages repo
+remote_theme: pages-themes/minimal@v0.2.0
 plugins:
+  - jekyll-feed
   - jekyll-sitemap
+
+# navigation links (theme reads this)
+navigation:
+  - title: "Projects"
+    url: "/"
+  - title: "About"
+    url: "/about"
