@@ -32,5 +32,5 @@ ul.proj-list li a{font-size:1.15rem;font-weight:600;color:#0366d6}
 hr {
   border: 0;
   border-top: 2px solid #bbb;   /* thickness / colour */
-  margin: 3rem 0;               /* ⬅️ vertical gap above & below */
+  margin: 3rem 0 !important;               /* ⬅️ vertical gap above & below */
 }
