@@ -37,7 +37,7 @@ hr {
 
 .project-page ul,
 .project-page ol {
-  margin-left: 1.5rem;      /* tweak until it feels right */
+  margin-left: 1.5rem !important;      /* tweak until it feels right */
   padding-left: 0;          /* keep bullets tight to the text */
 }
 
