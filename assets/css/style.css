@@ -34,3 +34,10 @@ hr {
   border-top: 2px solid #bbb;   /* thickness / colour */
   margin: 0.5rem 0 !important;               /* ⬅️ vertical gap above & below */
 }
+
+.project-page ul,
+.project-page ol {
+  margin-left: 1.5rem;      /* tweak until it feels right */
+  padding-left: 0;          /* keep bullets tight to the text */
+}
+
