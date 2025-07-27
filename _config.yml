@@ -10,6 +10,6 @@ plugins:
 # navigation links (theme reads this)
 navigation:
   - title: "Projects"
-    url: "/"
+    url: "/projects"
   - title: "About"
     url: "/about"
