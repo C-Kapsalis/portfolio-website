@@ -1,9 +1,35 @@
 - title: "ITC6001 – Last.fm Behaviour Analysis"
-  blurb: "Clustering 360 k user–artist interactions, dominant tags & cohorts."
+  blurb: "Clustering 360 k user–artist interactions to find dominant tastes."
   path:  "/projects/itc6001"
 
-- title: "ITC6002 – Exploratory Power‑BI Dashboards"
-  blurb: "Advanced Power BI data modelling & storytelling for marketing KPIs."
+- title: "ITC6002 – Exploratory BI Dashboards"
+  blurb: "Power BI modelling & visuals for marketing KPIs."
   path:  "/projects/itc6002"
 
-# …repeat for remaining seven projects…
+- title: "ITC6004 – Power BI Storytelling"
+  blurb: "End‑to‑end business dashboard in Power BI."
+  path:  "/projects/itc6004"
+
+- title: "ITC6008 – Azure Search‑Engine"
+  blurb: "Crawler + VSR + RAG pipeline for Azure Marketplace."
+  path:  "/projects/itc6008"
+
+- title: "ITC6009 – Guitar Template Matching"
+  blurb: "OpenCV pipeline to detect electric‑guitar parts."
+  path:  "/projects/itc6009"
+
+- title: "ITC6045 – DS Project Management"
+  blurb: "Agile PM artifacts for a data‑science workflow."
+  path:  "/projects/itc6045"
+
+- title: "ITC6103 – Applied ML"
+  blurb: "Regression, classification, clustering on tabular data."
+  path:  "/projects/itc6103"
+
+- title: "ITC6107 – Big‑Data Architectures"
+  blurb: "Kafka + Spark mock stock‑portfolio evaluator."
+  path:  "/projects/itc6107"
+
+- title: "ITC6110 – NLP with Transformers"
+  blurb: "Text classification & topic modelling with BERT."
+  path:  "/projects/itc6110"
