@@ -1,0 +1,8 @@
+---
+layout: default
+title: About
+---
+
+### Christoforos Kapsalis
+
+Data‑driven marketer specialising in BI & Power BI modelling, now sharpening product & business acumen as a Fulbright MSc Marketing scholar at Syracuse University.

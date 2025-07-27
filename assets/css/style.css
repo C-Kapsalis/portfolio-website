@@ -1,0 +1,6 @@
+body{font-family:system-ui,Arial,sans-serif;max-width:760px;margin:auto;padding:1rem;}
+header,footer{text-align:center;margin:1rem 0;}
+ul{list-style:none;padding:0;}
+ul li{margin:.4rem 0;}
+a{color:#0366d6;text-decoration:none;}
+a:hover{text-decoration:underline;}

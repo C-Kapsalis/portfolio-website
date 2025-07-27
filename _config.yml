@@ -1,0 +1,7 @@
+title: "Christoforos Kapsalis"
+tagline: "Marketing Analytics · Fulbright Scholar · Data Science Projects"
+baseurl: ""          # leave empty for project‑pages
+theme: minima
+plugins:
+  - jekyll‑sitemap
+  - jekyll‑feed
