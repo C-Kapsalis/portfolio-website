@@ -3,23 +3,32 @@
 <head>
   <meta charset="UTF-8">
   <title>Christoforos Kapsalis • Portfolio</title>
-  <link rel="stylesheet" href="styles.css">
+  <style>
+    body { font-family: sans-serif; max-width: 700px; margin: auto; padding: 1rem; }
+    header, footer { text-align: center; }
+    .project { border: 1px solid #ddd; padding: 1rem; margin-bottom: 1rem; }
+    a { color: #0366d6; text-decoration: none; }
+  </style>
 </head>
 <body>
   <header>
     <h1>Christoforos Kapsalis</h1>
-    <p>Marketing Analytics & BI • Fulbright Scholar @ Syracuse</p>
+    <p>Marketing Analytics & BI • Future Fulbright Scholar @ Syracuse</p>
   </header>
-  <section id="projects">
-    <article>
+
+  <section>
+    <div class="project">
       <h2><a href="projects/itc6109.html">Guitar Template Matching</a></h2>
-      <img src="assets/itc6109.png" alt="Guitar Matching">
-      <p>Custom OpenCV pipeline to match guitar shapes...</p>
-    </article>
-    <!-- repeat for each project -->
+      <p>Custom OpenCV pipeline to detect electric‑guitar parts.</p>
+    </div>
+    <!-- Repeat one block per project -->
   </section>
+
   <footer>
-    <p><a href="https://www.linkedin.com/in/christoforos-kapsalis/">LinkedIn</a> • <a href="mailto:ckapsalis@mayainsights.com">Email</a></p>
+    <p>
+      <a href="https://www.linkedin.com/in/christoforos-kapsalis/">LinkedIn</a> •
+      <a href="mailto:ckapsalis@mayainsights.com">Email</a>
+    </p>
   </footer>
 </body>
 </html>
