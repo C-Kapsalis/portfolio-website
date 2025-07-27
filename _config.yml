@@ -2,7 +2,7 @@ title: "Christoforos Kapsalis"
 tagline: "Marketing Analytics · BI · Fulbright MSc Marketing"
 description: "Graduate‑level data‑science and analytics portfolio"
 baseurl: "/portfolio-website"          # keeps URLs correct for project pages repo
-remote_theme: pages-themes/cayman@v0.2.0
+remote_theme: pages-themes/minimal@v0.2.0
 
 plugins:
   - jekyll-feed
