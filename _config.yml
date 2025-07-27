@@ -1,7 +1,6 @@
-title: "Christoforos Kapsalis"
-tagline: "Marketing Analytics · Fulbright Scholar · Data Science Projects"
-baseurl: ""          # leave empty for project‑pages
+title:  "Christoforos Kapsalis"
+tagline: "Marketing Analytics • BI • Data Science Projects"
+baseurl: "/portfolio-website"      # <‑‑ keep exactly if repo is portfolio‑website
 theme: minima
 plugins:
-  - jekyll‑sitemap
-  - jekyll‑feed
+  - jekyll-sitemap
