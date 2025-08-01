@@ -18,7 +18,7 @@ plugins:
 
 # Pagination settings (REQUIRED for blog posts to show)
 paginate: 5
-paginate_path: /page:num/
+paginate_path: /blog/page:num/
 
 # Collections configuration (REQUIRED for projects)
 collections:
@@ -32,8 +32,19 @@ collections_dir: .
 # Ensure proper styling
 minimal_mistakes_skin: "default" # or "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
 
+# Include pages
+include:
+  - _pages
+
 # Make sure these are set
 defaults:
+  # _pages
+  - scope:
+      path: "_pages"
+      type: "pages"
+    values:
+      layout: "single"
+      author_profile: true
   # _posts
   - scope:
       path: ""

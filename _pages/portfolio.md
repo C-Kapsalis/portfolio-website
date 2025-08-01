@@ -2,7 +2,9 @@
 title: "Projects"
 layout: single
 permalink: /portfolio/
-author_profile: true
+author_profile: false
+paginate: true
+entries_layout: list
 ---
 
 # My Projects
