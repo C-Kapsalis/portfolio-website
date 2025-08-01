@@ -26,6 +26,9 @@ collections:
     output: true
     permalink: /:collection/:path/
 
+# Enable collections processing
+collections_dir: .
+
 # Ensure proper styling
 minimal_mistakes_skin: "default" # or "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
 

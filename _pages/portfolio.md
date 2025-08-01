@@ -1,10 +1,14 @@
 ---
 title: "Projects"
-layout: collection
+layout: single
 permalink: /portfolio/
-collection: portfolio
-entries_layout: grid
-classes: wide
+author_profile: true
 ---
 
-Here are the team projects I completed as part of the MS in Data Science at the American College of Greece.
+# My Projects
+
+This is a test page to see if it works at all.
+
+- Project 1
+- Project 2
+- Project 3
