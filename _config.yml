@@ -6,7 +6,7 @@ url: "https://c-kapsalis.github.io"
 baseurl: "/portfolio-website"
 
 # Theme
-emote_theme: "mmistakes/minimal-mistakes@4.27.3"
+remote_theme: "mmistakes/minimal-mistakes@4.27.3"
 
 # Plugins\plugins:
   - jekyll-seo-tag
