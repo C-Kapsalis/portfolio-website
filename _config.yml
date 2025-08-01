@@ -1,28 +1,35 @@
-title: "Christoforos Kapsalis"
+# Site settings
+title: "Christoforos Kapsalis"
 tagline: "Marketing · BI"
 description: "Graduate‑level data‑science and analytics portfolio"
 url: "https://c-kapsalis.github.io"
-baseurl: "/portfolio-website"          # keeps URLs correct for project pages repo
+baseurl: "/portfolio-website"
 
-remote_theme: "mmistakes/minimal-mistakes@4.27.3"   # latest release as of Aug 2025
-plugins:
+# Theme
+emote_theme: "mmistakes/minimal-mistakes@4.27.3"
+
+# Plugins\plugins:
   - jekyll-seo-tag
   - jekyll-feed
   - jekyll-sitemap
-  - jekyll-include-cache  # optional
+  - jekyll-include-cache
 
-search: true 
+# Search
+search: true
 
-# navigation links (theme reads this)
-navigation:
-  - title: "Projects"
-    url: "/projects"
-  - title: "Blog"
-    url: "/blog"
-  - title: "About"
-    url: "/about"
-
+# Collections
 collections:
   projects:
     output: true
     permalink: /projects/:name
+
+# Nav (reads _data/navigation.yml if present)
+navigation:
+  - title: "Home"
+    url: "/"
+  - title: "Projects"
+    url: "/projects/"
+  - title: "Blog"
+    url: "/blog/"
+  - title: "About"
+    url: "/about/"

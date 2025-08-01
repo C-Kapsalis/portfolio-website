@@ -3,7 +3,7 @@ title: "Blog"
 layout: archive
 permalink: /blog/
 collection: posts
-entries_layout: grid      # or “list”
+entries_layout: grid
 show_excerpts: true
 pagination:
   enabled: true
