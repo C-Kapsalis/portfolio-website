@@ -26,7 +26,10 @@ collections:
     output: true
     permalink: /:collection/:path/
 
-# Front Matter Defaults
+# Ensure proper styling
+minimal_mistakes_skin: "default" # or "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
+
+# Make sure these are set
 defaults:
   # _posts
   - scope:
@@ -36,10 +39,11 @@ defaults:
       layout: single
       author_profile: true
       read_time: true
-      comments: true
+      comments: false
       share: true
       related: true
       show_date: true
+      title_separator: "|"
   # _portfolio
   - scope:
       path: ""

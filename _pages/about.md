@@ -1,7 +1,8 @@
 ---
-layout: page
 title: "About"
+layout: single
 permalink: /about/
+author_profile: true
 ---
 
 ### Christoforos Kapsalis
