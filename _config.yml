@@ -11,7 +11,7 @@ plugins:
   - jekyll-sitemap
   - jekyll-include-cache  # optional
 
-search:true 
+search: true 
 
 # navigation links (theme reads this)
 navigation:
