@@ -1,9 +1,10 @@
 ---
-
 layout: home
+title: "Projects"
 pagination:
   enabled: true
   collection: projects
-  show_excerpts: true  
-  
+  per_page: 6        
+  show_excerpts: true
+author_profile: false
 ---
