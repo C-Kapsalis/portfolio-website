@@ -4,6 +4,7 @@ title: "About"
 permalink: /about/
 ---
 
+
 ### Christoforos Kapsalis  
 
 Data‑driven marketer specialising in BI & Power BI.  
