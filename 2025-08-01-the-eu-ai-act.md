@@ -2,7 +2,6 @@
 title: "Navigating EU AI Regulation: The AI Act, the Code of Practice & What It Means for Start-ups"
 date: 2025-08-01 09:00:00 +0000
 layout: single
-author: yourname        # matches a key in _data/authors.yml
 categories: [blog]
 tags: [AI, EU, Regulation, Start-ups]
 ---
