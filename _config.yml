@@ -4,9 +4,13 @@ description: "Graduate‑level data‑science and analytics portfolio"
 baseurl: "/portfolio-website"          # keeps URLs correct for project pages repo
 remote_theme: pages-themes/minimal@v0.2.0
 
+# Add to existing config
 plugins:
   - jekyll-feed
   - jekyll-sitemap
+
+# Enable blog posts
+permalink: /blog/:year/:month/:day/:title/
 
 # navigation links (theme reads this)
 navigation:

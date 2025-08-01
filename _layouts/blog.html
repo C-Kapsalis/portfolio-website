@@ -1,0 +1,18 @@
+---
+layout: default
+---
+
+<h1>{{ page.title }}</h1>
+
+{% if page.content != "" %}
+  {{ content }}
+{% endif %}
+
+<ul class="proj-list">
+{% for post in site.posts %}
+  <li>
+    <a href="{{ post.url | relative_url }}">{{ post.title }}</a><br/>
+    <small>{{ post.date | date: "%B %d, %Y" }} • {{ post.excerpt | strip_html | truncatewords: 20 }}</small>
+  </li>
+{% endfor %}
+</ul>
