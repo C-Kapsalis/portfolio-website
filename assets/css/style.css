@@ -42,3 +42,14 @@ hr {
   padding-left: 0;                  /* keep bullets tight */
 }
 
+
+/* Remove underlines from all links */
+a {
+  text-decoration: none !important;
+}
+
+/* Optional: Keep underline on hover for better UX */
+a:hover {
+  text-decoration: underline !important;
+}
+
