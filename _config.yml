@@ -8,7 +8,8 @@ baseurl: "/portfolio-website"
 # Theme
 remote_theme: "mmistakes/minimal-mistakes@4.27.3"
 
-# Plugins\plugins:
+# Plugins
+plugins:
   - jekyll-seo-tag
   - jekyll-feed
   - jekyll-sitemap
@@ -23,7 +24,7 @@ collections:
     output: true
     permalink: /projects/:name
 
-# Nav (reads _data/navigation.yml if present)
+# Navigation
 navigation:
   - title: "Home"
     url: "/"
