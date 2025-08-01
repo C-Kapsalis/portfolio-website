@@ -1,9 +1,9 @@
 main:
   - title: "Home"
-    url: /portfolio-website/
+    url: /
   - title: "Projects"
-    url: /portfolio-website/portfolio/
+    url: /portfolio/
   - title: "Blog"
-    url: /portfolio-website/blog/
+    url: /blog/
   - title: "About"
-    url: /portfolio-website/about/
+    url: /about/
