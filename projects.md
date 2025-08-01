@@ -1,10 +1,12 @@
 ---
-
-title:  "Projects"
+title: "Projects"
 layout: archive
 permalink: /projects/
 collection: projects
 entries_layout: grid
-show_excerpts: true    # ← turns on the excerpt field you just added
-
+show_excerpts: true
+pagination:
+  enabled: true
+  collection: projects
+  per_page: 10
 ---

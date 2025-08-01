@@ -1,10 +1,8 @@
 ---
-layout: home
+layout: archive
 title: "Projects"
-pagination:
-  enabled: true
-  collection: projects
-  per_page: 6        
-  show_excerpts: true
-author_profile: false
+permalink: /
+collection: projects
+entries_layout: grid
+show_excerpts: true
 ---
