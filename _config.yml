@@ -7,9 +7,6 @@ remote_theme: mmistakes/minimal-mistakes@4.24.0
 plugins:
   - jekyll-feed
   - jekyll-sitemap
-  - jekyll-paginate
-paginate: 5
-paginate_path: "/blog/page:num/"
 
 # navigation links (theme reads this)
 navigation:

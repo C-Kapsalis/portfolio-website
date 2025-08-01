@@ -1,0 +1,44 @@
+/* basic reset */
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,
+     "Helvetica Neue",Arial,sans-serif;line-height:1.6;
+     color:#333;background:#fafafa}
+
+/* container */
+.wrapper{max-width:780px;margin:auto;padding:1.5rem}
+
+/* header */
+.site-header{background:#fff;border-bottom:1px solid #e5e5e5;
+             padding:1rem 0;margin-bottom:2rem;text-align:center}
+.site-header h1{font-size:1.9rem;font-weight:600;margin-bottom:.3rem}
+.site-header nav a{margin:0 .6rem;color:#0366d6;text-decoration:none}
+.site-header nav a:hover{text-decoration:underline}
+
+/* footer */
+.footer{margin:3rem 0;text-align:center;font-size:.85rem;color:#777}
+
+/* project list */
+ul.proj-list{list-style:none;padding:0}
+ul.proj-list li{border:1px solid #e0e0e0;background:#fff;
+                padding:1rem;border-radius:.4rem;margin-bottom:1rem}
+ul.proj-list li a{font-size:1.15rem;font-weight:600;color:#0366d6}
+
+/* individual project */
+.project-page h1{margin-bottom:1rem}
+.project-page img{max-width:100%;border:1px solid #ddd;border-radius:4px;margin:1rem 0}
+
+/* wider horizontal rule */
+hr {
+  border: 0;
+  border-top: 2px solid #bbb;   /* thickness / colour */
+  margin: 0.5rem 0 !important;               /* ⬅️ vertical gap above & below */
+}
+
+/* move bullets / numbers in all main‑content areas */
+.wrapper ul,
+.wrapper ol {
+  margin-left: 1.6rem !important;   /* shift right; tweak rem value */
+  padding-left: 0;                  /* keep bullets tight */
+}
+
