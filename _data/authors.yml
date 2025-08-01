@@ -1,0 +1,7 @@
+yourname:
+  name: "Chris Example"
+  bio: "Growth‑marketing analyst by day, doom‑metal aficionado by night."
+  links:
+    - label: "GitHub"
+      icon: "fab fa-fw fa-github"
+      url:  "https://github.com/C-Kapsalis"

@@ -1,0 +1,8 @@
+---
+# Front‑matter turns this into a Jekyll asset
+---
+
+$brand-color: #1756ff;           // replaces accent colour everywhere
+$mm-font-family-base: 'Inter', system-ui, sans-serif;
+
+@import "minimal-mistakes";      // pulls in everything from the theme
