@@ -1,6 +1,5 @@
 /* basic reset */
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-
 body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,
      "Helvetica Neue",Arial,sans-serif;line-height:1.6;
      color:#333;background:#fafafa}
@@ -31,37 +30,32 @@ ul.proj-list li a{font-size:1.15rem;font-weight:600;color:#0366d6}
 /* wider horizontal rule */
 hr {
   border: 0;
-  border-top: 2px solid #bbb;   /* thickness / colour */
-  margin: 0.5rem 0 !important;               /* ⬅️ vertical gap above & below */
+  border-top: 2px solid #bbb;
+  margin: 0.5rem 0 !important;
 }
 
 /* move bullets / numbers in all main‑content areas */
 .wrapper ul,
 .wrapper ol {
-  margin-left: 1.6rem !important;   /* shift right; tweak rem value */
-  padding-left: 0;                  /* keep bullets tight */
+  margin-left: 1.6rem !important;
+  padding-left: 0;
 }
-
 
 /* Remove underlines from all links */
 a {
   text-decoration: none !important;
 }
-
-/* Optional: Keep underline on hover for better UX */
 a:hover {
   text-decoration: underline !important;
 }
-
 
 /* Better breadcrumb spacing */
 .breadcrumb-container {
   background: transparent;
   border-bottom: none;
-  padding: 1.5rem 0 1rem 0;  /* More space above, less below */
-  margin-bottom: 2rem;       /* More space before content */
+  padding: 1.5rem 0 1rem 0;
+  margin-bottom: 2rem;
 }
-
 .breadcrumb {
   list-style: none;
   padding: 0;
@@ -71,19 +65,16 @@ a:hover {
   display: flex;
   align-items: center;
 }
-
 .breadcrumb li {
   display: flex;
   align-items: center;
 }
-
 .breadcrumb li + li:before {
   content: "→";
   color: #6c757d;
   margin: 0 0.75rem;
   font-size: 0.75rem;
 }
-
 .breadcrumb a {
   color: #0366d6;
   text-decoration: none;
@@ -91,12 +82,10 @@ a:hover {
   border-radius: 0.25rem;
   transition: background-color 0.15s ease;
 }
-
 .breadcrumb a:hover {
   background-color: rgba(3, 102, 214, 0.1);
   text-decoration: none;
 }
-
 .breadcrumb li:last-child {
   color: #495057;
   font-weight: 500;
@@ -115,17 +104,27 @@ a:hover {
 .wrapper {
   max-width: 780px;
   margin: auto;
-  padding: 1.5rem;  /* Default padding for all sides */
+  padding: 1.5rem;
 }
-
-
-
-/* Special spacing for pages WITH breadcrumbs */
 body:not(.home-page) .wrapper {
-  padding-top: 0;  /* Remove top padding when breadcrumbs are present */
+  padding-top: 0;
+}
+.home-page .wrapper {
+  padding-top: 2rem;
 }
 
-/* Ensure homepage gets proper top spacing */
-.home-page .wrapper {
-  padding-top: 2rem;  /* Extra top padding for homepage */
+/* ONLY target homepage heading and intro - leave project pages alone */
+.home-page .wrapper > h2:first-of-type {
+  text-align: center;
+  margin: 1rem 0 2rem 0;
+  font-size: 1.75rem;
+  font-weight: 600;
+  color: #2c3e50;
+}
+.home-page .wrapper > p:first-of-type {
+  text-align: center;
+  margin-bottom: 1rem;
+  color: #6c757d;
+  font-size: 1.1rem;
+  line-height: 1.6;
 }
