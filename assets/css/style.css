@@ -58,8 +58,10 @@ a:hover {
 .breadcrumb {
   list-style: none;
   padding: 0;
-  margin: 1rem 0;
+  margin: 1rem auto;  /* Changed: auto centers horizontally */
   font-size: 0.9rem;
+  text-align: center;  /* Added: centers the text */
+  max-width: 780px;    /* Added: matches your wrapper width */
 }
 
 .breadcrumb li {
