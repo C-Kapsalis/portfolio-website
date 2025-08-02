@@ -56,27 +56,61 @@
 <!-- simple search feature script -->
 <script src="https://unpkg.com/simple-jekyll-search/dest/simple-jekyll-search.min.js"></script>
 <script>
-const path = window.location.pathname;
-let jsonPath = null;
-
-	if (path.includes('/portfolio') && !path.includes('/blog')) {
-  	jsonPath = '{{ "/search-projects.json" | relative_url }}';
-	} 	else if (path.includes('/blog')) {
-  	jsonPath = '{{ "/search-posts.json" | relative_url }}';
-	}
-
+document.addEventListener('DOMContentLoaded', function() {
+  const searchInput = document.getElementById('search-input');
+  const resultsContainer = document.getElementById('results-container');
+  
+  if (!searchInput || !resultsContainer) return;
+  
+  const path = window.location.pathname;
+  let jsonPath = null;
+  
+  console.log('Current path:', path); // Debug log
+  
+  // Fix the path detection logic
+  if (path.includes('/blog')) {
+    jsonPath = '{{ "/search-posts.json" | relative_url }}';
+    console.log('Using posts search');
+  } else if (path === '{{ "/" | relative_url }}' || path.includes('/projects')) {
+    jsonPath = '{{ "/search-projects.json" | relative_url }}';
+    console.log('Using projects search');
+  }
+  
+  console.log('JSON path:', jsonPath); // Debug log
+  
   if (jsonPath) {
     SimpleJekyllSearch({
-      searchInput: document.getElementById('search-input'),
-      resultsContainer: document.getElementById('results-container'),
+      searchInput: searchInput,
+      resultsContainer: resultsContainer,
       json: jsonPath,
       searchResultTemplate: '<li><a href="{url}">{title}</a></li>',
-      noResultsText: 'No results found.',
+      noResultsText: '<li style="padding: 0.75rem 1rem; color: #6b7280;">No results found.</li>',
       limit: 10,
       fuzzy: false
     });
+    
+    // Show/hide results container based on input
+    searchInput.addEventListener('input', function() {
+      if (this.value.trim() === '') {
+        resultsContainer.style.display = 'none';
+      }
+    });
+    
+    // Hide results when clicking outside
+    document.addEventListener('click', function(e) {
+      if (!searchInput.contains(e.target) && !resultsContainer.contains(e.target)) {
+        resultsContainer.style.display = 'none';
+      }
+    });
+    
+    // Show results when focusing on search
+    searchInput.addEventListener('focus', function() {
+      if (resultsContainer.children.length > 0) {
+        resultsContainer.style.display = 'block';
+      }
+    });
   }
+});
 </script>
-
 </body>
 </html>
