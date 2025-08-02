@@ -1,19 +1,34 @@
-{% unless page.url == '/' or page.url == '/portfolio-website/' %}
-<div class="breadcrumb-container">
-  <nav aria-label="breadcrumb">
-    <ol class="breadcrumb">
-      <li><a href="{{ '/' | relative_url }}">Home</a></li>
-      {% if page.layout == 'blog' %}
-        <li>Blog</li>
-      {% elsif page.collection == 'projects' %}
-        <li><a href="{{ '/' | relative_url }}">Projects</a></li>
-        <li>{{ page.title }}</li>
-      {% elsif page.url == '/about/' %}
-        <li>About</li>
-      {% elsif page.url == '/blog/' %}
-        <li>Blog</li>
+<nav aria-label="Breadcrumb" class="breadcrumb">
+  <ol>
+    <li><a href="{{ '/' | relative_url }}">Home</a></li>
+    
+    {% comment %} Split the page URL and create breadcrumbs {% endcomment %}
+    {% assign crumbs = page.url | remove:'/index.html' | split: '/' %}
+    {% assign crumb_path = '' %}
+    
+    {% for crumb in crumbs offset: 1 %}
+      {% if forloop.last %}
+        {% comment %} Last item (current page) - not linked {% endcomment %}
+        <li aria-current="page">
+          {% if page.title %}
+            {{ page.title }}
+          {% else %}
+            {{ crumb | replace:'-',' ' | remove:'.html' | capitalize }}
+          {% endif %}
+        </li>
+      {% else %}
+        {% comment %} Intermediate crumbs - linked {% endcomment %}
+        {% assign crumb_path = crumb_path | append: '/' | append: crumb %}
+        <li>
+          <a href="{{ crumb_path | relative_url }}">
+            {% if crumb == 'blog' %}
+              Blog
+            {% else %}
+              {{ crumb | replace:'-',' ' | remove:'.html' | capitalize }}
+            {% endif %}
+          </a>
+        </li>
       {% endif %}
-    </ol>
-  </nav>
-</div>
-{% endunless %}
+    {% endfor %}
+  </ol>
+</nav>

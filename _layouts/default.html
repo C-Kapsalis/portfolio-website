@@ -28,13 +28,14 @@
   <main class="wrapper">
 
 	<!-- simple search feature -->
-	{% assign path = page.url %}
-	{% if path == "/" or path == "/portfolio-website/" or path == "/portfolio-website/portfolio/" or path == "/portfolio-website/blog/" %}
-	  <div class="search-box">
-	    <input type="text" id="search-input" placeholder="Search..." />
-	    <ul id="results-container"></ul>
-	  </div>
-	{% endif %}
+{% assign normalized_path = page.url | replace: '/$', '' %}
+{% if normalized_path == "" or normalized_path == "/portfolio-website" or normalized_path == "/portfolio-website/blog" or normalized_path == "/portfolio-website/portfolio" %}
+  <div class="search-box">
+    <input type="text" id="search-input" placeholder="Search..." />
+    <ul id="results-container"></ul>
+  </div>
+{% endif %}
+
 
     {{ content }}
   </main>
