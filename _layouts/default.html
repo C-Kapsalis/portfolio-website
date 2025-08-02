@@ -26,21 +26,15 @@
   {% include header.html %}
   {% include breadcrumbs.html %}
   <main class="wrapper">
+
 	<!-- simple search feature -->
-		{% assign path = page.url %}
-		{% unless path contains '/about' or path contains '/portfolio/' or path contains '/blog/' or path contains '/portfolio-website/about' %}
-  			{% if path == '/' or path == '/portfolio-website/' or path == '/portfolio-website/blog/' or path == '/portfolio-website/portfolio/' %}
-    			<div class="search-box">
-      				<input type="text" id="search-input" placeholder="Search..." />
-      				<ul id="results-container"></ul>
-    			</div>
-  			{% endif %}
-		{% endunless %}
-  		<div class="search-box">
-    		<input type="text" id="search-input" placeholder="Search..." />
-    		<ul id="results-container"></ul>
-  		</div>
-	{% endunless %}
+	{% assign path = page.url %}
+	{% if path == "/" or path == "/portfolio-website/" or path == "/portfolio-website/portfolio/" or path == "/portfolio-website/blog/" %}
+	  <div class="search-box">
+	    <input type="text" id="search-input" placeholder="Search..." />
+	    <ul id="results-container"></ul>
+	  </div>
+	{% endif %}
 
     {{ content }}
   </main>
