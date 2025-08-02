@@ -128,3 +128,12 @@ body:not(.home-page) .wrapper {
   font-size: 1.1rem;
   line-height: 1.6;
 }
+
+/* Center the Blog page h1 heading */
+.wrapper > h1:first-of-type {
+  text-align: center;
+  margin: 1rem 0 2rem 0;
+  font-size: 1.75rem;
+  font-weight: 600;
+  color: #2c3e50;
+}
