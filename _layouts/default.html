@@ -55,14 +55,14 @@
 <!-- simple search feature script -->
 <script src="https://unpkg.com/simple-jekyll-search/dest/simple-jekyll-search.min.js"></script>
 <script>
-  const path = window.location.pathname;
-  let jsonPath = null;
+const path = window.location.pathname;
+let jsonPath = null;
 
-  if (path === '/' || path.startsWith('/portfolio') || path.startsWith('/portfolio-website/portfolio')) {
-    jsonPath = '{{ "/search-projects.json" | relative_url }}';
-  } else if (path.startsWith('/blog') || path.startsWith('/portfolio-website/blog')) {
-    jsonPath = '{{ "/search-posts.json" | relative_url }}';
-  }
+	if (path.includes('/portfolio') && !path.includes('/blog')) {
+  	jsonPath = '{{ "/search-projects.json" | relative_url }}';
+	} 	else if (path.includes('/blog')) {
+  	jsonPath = '{{ "/search-posts.json" | relative_url }}';
+	}
 
   if (jsonPath) {
     SimpleJekyllSearch({
