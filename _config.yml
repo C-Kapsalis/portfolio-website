@@ -1,14 +1,55 @@
 title: "Christoforos Kapsalis"
 tagline: "Marketing Analytics · BI · Fulbright MSc Marketing"
-description: "Graduate‑level data‑science and analytics portfolio"
+description: "Graduate-level data science and analytics portfolio showcasing marketing analytics, BI, and machine learning projects by Fulbright Scholar Christoforos Kapsalis"
 baseurl: "/portfolio-website"          # keeps URLs correct for project pages repo
-remote_theme: pages-themes/minimal@v0.2.0
 
-# Add to existing config
+# Author Information
+author: 
+  name: "Christoforos Kapsalis"
+  email: "ch.kapsalis@outlook.com"
+  bio: "Marketing Engineer, Fulbright MSc Marketing Candidate"
+  location: "Syracuse, NY, USA"
+  links:
+    - label: "LinkedIn"
+      icon: "fab fa-fw fa-linkedin"
+      url: "https://linkedin.com/in/christoforos-kapsalis"
+    - label: "GitHub"
+      icon: "fab fa-fw fa-github"
+      url: "https://github.com/C-Kapsalis"
+
+
+
+
+
+remote_theme: pages-themes/minimal@v0.2.0
+markdown: kramdown
+highlighter: rouge
 plugins:
   - jekyll-feed
   - jekyll-sitemap
+  - jekyll-seo-tag
+  - jekyll-optional-front-matter
 
+# Performance optimizations
+sass:
+  style: compressed
+
+# Exclude unnecessary files from build
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor
+
+# Enable gzip compression (GitHub Pages does this automatically)
+compress_html:
+  clippings: all
+  comments: ["<!-- ", " -->"]
+  endings: all
+  startings: []
+  blanklines: false
+  profile: false
 # Enable blog posts
 permalink: /blog/:year/:month/:day/:title/
 
@@ -23,3 +64,39 @@ collections:
   projects:
     output: true
     permalink: /projects/:name
+
+
+# SEO
+lang: en_US
+locale: en_US
+
+# Social
+social:
+  name: Christoforos Kapsalis
+  links:
+    - https://linkedin.com/in/christoforos-kapsalis
+    - https://github.com/C-Kapsalis
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

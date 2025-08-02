@@ -44,5 +44,19 @@
   <footer class="footer">
     © {{ "now" | date: "%Y" }} Christoforos Kapsalis
   </footer>
+  
+  
+  <!-- Google Analytics setup -->
+  {% if jekyll.environment == 'production' %}
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-RE9Q79WW3E"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-RE9Q79WW3E');
+  </script>
+{% endif %}
+
 </body>
 </html>
