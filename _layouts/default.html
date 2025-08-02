@@ -27,8 +27,9 @@
   {% include breadcrumbs.html %}
   <main class="wrapper">
 
-<!-- simple search feature -->
-{% if page.url == "/portfolio-website/blog/" or page.url == "/portfolio-website/portfolio/" or page.url == "/portfolio-website/" %}
+<!-- Simple search feature -->
+{% assign current_url = page.url | prepend: site.baseurl %}
+{% if page.url == "/blog/" or page.url contains "/blog/" or page.url == "/" or page.url contains "/projects/" %}
   <div class="search-box">
     <input type="text" id="search-input" placeholder="Search..." />
     <ul id="results-container"></ul>
@@ -60,23 +61,24 @@ document.addEventListener('DOMContentLoaded', function() {
   const searchInput = document.getElementById('search-input');
   const resultsContainer = document.getElementById('results-container');
   
-  if (!searchInput || !resultsContainer) return;
+  if (!searchInput || !resultsContainer) {
+    console.log('Search elements not found');
+    return;
+  }
   
   const path = window.location.pathname;
   let jsonPath = null;
   
-  console.log('Current path:', path); // Debug log
+  console.log('Current path:', path);
   
-  // Fix the path detection logic
+  // FIXED: Account for baseurl in path detection
   if (path.includes('/blog')) {
-    jsonPath = '{{ "/search-posts.json" | relative_url }}';
-    console.log('Using posts search');
-  } else if (path === '{{ "/" | relative_url }}' || path.includes('/projects')) {
-    jsonPath = '{{ "/search-projects.json" | relative_url }}';
-    console.log('Using projects search');
+    jsonPath = '{{ site.baseurl }}/search-posts.json';
+  } else if (path === '{{ site.baseurl }}/' || path === '{{ site.baseurl }}' || path.includes('/projects')) {
+    jsonPath = '{{ site.baseurl }}/search-projects.json';
   }
   
-  console.log('JSON path:', jsonPath); // Debug log
+  console.log('JSON path:', jsonPath);
   
   if (jsonPath) {
     SimpleJekyllSearch({
@@ -89,24 +91,9 @@ document.addEventListener('DOMContentLoaded', function() {
       fuzzy: false
     });
     
-    // Show/hide results container based on input
     searchInput.addEventListener('input', function() {
       if (this.value.trim() === '') {
         resultsContainer.style.display = 'none';
-      }
-    });
-    
-    // Hide results when clicking outside
-    document.addEventListener('click', function(e) {
-      if (!searchInput.contains(e.target) && !resultsContainer.contains(e.target)) {
-        resultsContainer.style.display = 'none';
-      }
-    });
-    
-    // Show results when focusing on search
-    searchInput.addEventListener('focus', function() {
-      if (resultsContainer.children.length > 0) {
-        resultsContainer.style.display = 'block';
       }
     });
   }
