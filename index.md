@@ -4,10 +4,7 @@ title: Projects
 description: "Data science and marketing analytics portfolio showcasing machine learning, BI, and statistical analysis projects"
 ---
 
-My data science and marketing analytics portfolio featuring projects in machine learning, business intelligence, and statistical analysis.
-
-### Featured Projects
-
+## Featured Data Science and BI Projects
 
 <ul class="proj-list">
 {% for p in site.projects %}
