@@ -6,6 +6,9 @@
   <title>{{ page.title }} │ {{ site.title }}</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
 
+  <!-- SEO Tags (this generates meta descriptions automatically) -->
+  {% seo %}
+
   <!-- Keywords -->
   <meta name="keywords" content="{% if page.keywords %}{{ page.keywords }}{% else %}marketing analytics, data science, business intelligence, power bi, machine learning, portfolio, fulbright{% endif %}">
 
