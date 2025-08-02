@@ -54,11 +54,11 @@ a:hover {
 }
 
 
-/* Modern breadcrumb with subtle styling */
+/* Remove the gray background and make it blend */
 .breadcrumb-container {
-  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
-  border-bottom: 1px solid #dee2e6;
-  padding: 0.875rem 0;
+  background: transparent;  /* Remove gray background */
+  border-bottom: none;      /* Remove gray line */
+  padding: 1rem 0;
   margin-bottom: 1.5rem;
 }
 
@@ -78,7 +78,7 @@ a:hover {
 }
 
 .breadcrumb li + li:before {
-  content: "→";  /* or use "›" or "▶" */
+  content: "→";
   color: #6c757d;
   margin: 0 0.75rem;
   font-size: 0.75rem;
