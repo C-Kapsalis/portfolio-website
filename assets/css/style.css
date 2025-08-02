@@ -169,9 +169,11 @@ body:not(.home-page) .wrapper {
 }
 
 
-/* simple search feature styling - i want it to stick to the breadcrumbs */
+/* simple search feature styling */
 .search-box {
-  margin: 0 auto 2rem auto !important; /* Zero top margin */
+  max-width: 600px;
+  padding: 0 1rem;
+  margin: 1rem auto 2rem auto; /* Consistent spacing */
 }
 
 /* Force consistent positioning regardless of page content */
