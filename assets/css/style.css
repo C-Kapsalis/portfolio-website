@@ -54,12 +54,12 @@ a:hover {
 }
 
 
-/* Remove the gray background and make it blend */
+/* Better breadcrumb spacing */
 .breadcrumb-container {
-  background: transparent;  /* Remove gray background */
-  border-bottom: none;      /* Remove gray line */
-  padding: 1rem 0;
-  margin-bottom: 1.5rem;
+  background: transparent;
+  border-bottom: none;
+  padding: 1.5rem 0 1rem 0;  /* More space above, less below */
+  margin-bottom: 2rem;       /* More space before content */
 }
 
 .breadcrumb {
@@ -100,4 +100,20 @@ a:hover {
 .breadcrumb li:last-child {
   color: #495057;
   font-weight: 500;
+}
+
+/* Reduce spacing after header */
+.site-header {
+  background: #fff;
+  border-bottom: 1px solid #e5e5e5;
+  padding: 1rem 0;
+  margin-bottom: 0;  /* Remove bottom margin */
+  text-align: center;
+}
+
+/* Add better spacing for main content */
+.wrapper {
+  max-width: 780px;
+  margin: auto;
+  padding: 0 1.5rem 1.5rem 1.5rem;  /* No top padding, breadcrumbs handle it */
 }
