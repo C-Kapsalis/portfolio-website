@@ -102,18 +102,28 @@ a:hover {
   font-weight: 500;
 }
 
-/* Reduce spacing after header */
+/* Keep header as is */
 .site-header {
   background: #fff;
   border-bottom: 1px solid #e5e5e5;
   padding: 1rem 0;
-  margin-bottom: 0;  /* Remove bottom margin */
+  margin-bottom: 0;
   text-align: center;
 }
 
-/* Add better spacing for main content */
+/* Fix wrapper spacing - different for homepage vs other pages */
 .wrapper {
   max-width: 780px;
   margin: auto;
-  padding: 0 1.5rem 1.5rem 1.5rem;  /* No top padding, breadcrumbs handle it */
+  padding: 1.5rem;  /* Default padding for all sides */
+}
+
+/* Special spacing for pages WITH breadcrumbs */
+body:not(.home-page) .wrapper {
+  padding-top: 0;  /* Remove top padding when breadcrumbs are present */
+}
+
+/* Ensure homepage gets proper top spacing */
+.home-page .wrapper {
+  padding-top: 2rem;  /* Extra top padding for homepage */
 }

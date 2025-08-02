@@ -41,14 +41,14 @@
   {% include structured-data.html %}
   
 </head>
-<body>
+<body{% if page.url == '/' or page.url == '/portfolio-website/' %} class="home-page"{% endif %}>
   {% include header.html %}
   {% include breadcrumbs.html %}
   <main class="wrapper">
     {{ content }}
   </main>
   <footer class="footer">
-    © {{ "now" | date: "%Y" }} Christoforos Kapsalis
+    © {{ "now" | date: "%Y" }} Christoforos Kapsalis
   </footer>
   
   
