@@ -137,3 +137,8 @@ body:not(.home-page) .wrapper {
   font-weight: 600;
   color: #2c3e50;
 }
+
+/* Reduce space between breadcrumbs and first h1 heading */
+.breadcrumb-container + .wrapper > h1:first-of-type {
+  margin-top: 0;  /* Remove top margin when following breadcrumbs */
+}
