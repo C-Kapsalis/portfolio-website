@@ -118,28 +118,7 @@ a:hover {
   padding: 1.5rem;  /* Default padding for all sides */
 }
 
-/* Center the Featured Projects heading with proper spacing */
-.wrapper h2 {
-  text-align: center;
-  margin: 3rem 0;  /* Equal spacing above and below */
-  font-size: 1.75rem;
-  font-weight: 600;
-  color: #2c3e50;
-}
 
-/* Adjust spacing for the intro paragraph */
-.wrapper p {
-  text-align: center;
-  margin-bottom: 2rem;
-  color: #6c757d;
-  font-size: 1.1rem;
-  line-height: 1.6;
-}
-
-/* Ensure project list has proper spacing after heading */
-.wrapper h2 + ul.proj-list {
-  margin-top: 2rem;
-}
 
 /* Special spacing for pages WITH breadcrumbs */
 body:not(.home-page) .wrapper {
