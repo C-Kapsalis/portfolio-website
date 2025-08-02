@@ -1,0 +1,80 @@
+<!-- Personal/Professional Schema -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Christoforos Kapsalis",
+  "jobTitle": "Marketing Engineer",
+  "description": "Fulbright MSc Marketing candidate specializing in Marketing Analytics, CRM automations, and business development.",
+  "url": "{{ site.url }}{{ site.baseurl }}",
+  "sameAs": [
+    "https://linkedin.com/in/christoforos-kapsalis",
+    "https://github.com/C-Kapsalis"
+  ],
+  "knowsAbout": ["Marketing Analytics", "Business Intelligence", "Data Science", "Power BI", "Machine Learning", "Business Development", "Entrepreneurship"],
+  "alumniOf": [
+    {
+      "@type": "EducationalOrganization",
+      "name": "Syracuse University",
+      "location": {
+        "@type": "Place",
+        "name": "Syracuse, NY, USA"
+      }
+    },
+    {
+      "@type": "EducationalOrganization", 
+      "name": "The American College of Greece",
+      "location": {
+        "@type": "Place",
+        "name": "Athens, Greece"
+      }
+    },
+    {
+      "@type": "EducationalOrganization",
+      "name": "Athens University of Economics and Business", 
+      "location": {
+        "@type": "Place",
+        "name": "Athens, Greece"
+      }
+    }
+  ],
+  "workLocation": {
+    "@type": "Place",
+    "name": "Syracuse, NY, USA"
+  }
+}
+</script>
+
+<!-- Website Schema -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "{{ site.title }}",
+  "description": "{{ site.description }}",
+  "url": "{{ site.url }}{{ site.baseurl }}",
+  "author": {
+    "@type": "Person",
+    "name": "Christoforos Kapsalis"
+  },
+  "inLanguage": "en-US"
+}
+</script>
+
+<!-- Portfolio Schema -->
+{% if page.collection == 'projects' %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "CreativeWork",
+  "name": "{{ page.title }}",
+  "description": "{{ page.excerpt | strip_html }}",
+  "author": {
+    "@type": "Person",
+    "name": "Christoforos Kapsalis"
+  },
+  "dateCreated": "{{ page.date | date_to_xmlschema }}",
+  "inLanguage": "en-US"
+}
+</script>
+{% endif %}

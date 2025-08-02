@@ -53,3 +53,30 @@ a:hover {
   text-decoration: underline !important;
 }
 
+
+/* Breadcrumb styles */
+.breadcrumb {
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0;
+  font-size: 0.9rem;
+}
+
+.breadcrumb li {
+  display: inline;
+}
+
+.breadcrumb li + li:before {
+  content: " / ";
+  color: #666;
+  margin: 0 0.5rem;
+}
+
+.breadcrumb a {
+  color: #0366d6;
+  text-decoration: none;
+}
+
+.breadcrumb a:hover {
+  text-decoration: underline;
+}

@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+
+# Block admin/private areas (add if you have any)
+# Disallow: /admin/
+# Disallow: /_data/
+
+Sitemap: https://c-kapsalis.github.io/portfolio-website/sitemap.xml

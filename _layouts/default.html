@@ -2,12 +2,42 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
+  <!-- Basic SEO -->
   <title>{{ page.title }} │ {{ site.title }}</title>
-  <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
   <meta name="viewport" content="width=device-width,initial-scale=1">
+
+  <!-- Keywords -->
+  <meta name="keywords" content="{% if page.keywords %}{{ page.keywords }}{% else %}marketing analytics, data science, business intelligence, power bi, machine learning, portfolio, fulbright{% endif %}">
+
+  <!-- Author -->
+  <meta name="author" content="Christoforos Kapsalis">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}">
+  <meta property="og:description" content="{% if page.description %}{{ page.description }}{% elsif page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncatewords: 25 }}{% else %}{{ site.description }}{% endif %}">
+  <meta property="og:type" content="{% if page.collection == 'projects' %}article{% else %}website{% endif %}">
+  <meta property="og:url" content="{{ page.url | absolute_url }}">
+  <meta property="og:site_name" content="{{ site.title }}">
+  <meta property="og:locale" content="en_US">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}">
+  <meta name="twitter:description" content="{% if page.description %}{{ page.description }}{% elsif page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncatewords: 25 }}{% else %}{{ site.description }}{% endif %}">
+
+  <!-- Canonical URL -->
+  <link rel="canonical" href="{{ page.url | absolute_url }}">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+
+  <!-- Structured Data -->
+  {% include structured-data.html %}
+  
 </head>
 <body>
   {% include header.html %}
+  {% include breadcrumbs.html %}
   <main class="wrapper">
     {{ content }}
   </main>
