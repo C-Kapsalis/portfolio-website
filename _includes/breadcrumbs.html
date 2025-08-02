@@ -1,19 +1,19 @@
+{% unless page.url == '/' or page.url == '/portfolio-website/' %}
 <div class="breadcrumb-container">
   <nav aria-label="breadcrumb">
     <ol class="breadcrumb">
-      {% unless page.url == '/' or page.url == '/portfolio-website/' %}
-        <li><a href="{{ '/' | relative_url }}">Home</a></li>
-        {% if page.layout == 'blog' %}
-          <li>Blog</li>
-        {% elsif page.collection == 'projects' %}
-          <li><a href="{{ '/' | relative_url }}">Projects</a></li>
-          <li>{{ page.title }}</li>
-        {% elsif page.url == '/about/' %}
-          <li>About</li>
-        {% elsif page.url == '/blog/' %}
-          <li>Blog</li>
-        {% endif %}
-      {% endunless %}
+      <li><a href="{{ '/' | relative_url }}">Home</a></li>
+      {% if page.layout == 'blog' %}
+        <li>Blog</li>
+      {% elsif page.collection == 'projects' %}
+        <li><a href="{{ '/' | relative_url }}">Projects</a></li>
+        <li>{{ page.title }}</li>
+      {% elsif page.url == '/about/' %}
+        <li>About</li>
+      {% elsif page.url == '/blog/' %}
+        <li>Blog</li>
+      {% endif %}
     </ol>
   </nav>
 </div>
+{% endunless %}
