@@ -30,6 +30,10 @@ plugins:
   - jekyll-sitemap
   - jekyll-seo-tag
   - jekyll-optional-front-matter
+  - jekyll-paginate
+
+paginate: 10             # Number of posts per page
+paginate_path: "/blog/page:num"
 
 # Performance optimizations
 sass:
