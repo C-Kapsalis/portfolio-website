@@ -176,6 +176,16 @@ body:not(.home-page) .wrapper {
   padding: 0 1rem;
 }
 
+/* Adjust spacing based on page type */
+.home-page .search-box {
+  margin: 2rem auto 2rem auto; /* More top margin on homepage since no breadcrumbs */
+}
+
+/* If there are breadcrumbs above, reduce top margin */
+.breadcrumb + .wrapper .search-box {
+  margin: 1rem auto 2rem auto; /* Normal spacing when breadcrumbs present */
+}
+
 .search-box input {
   width: 100%;
   padding: 0.75rem 1rem;
@@ -202,11 +212,11 @@ body:not(.home-page) .wrapper {
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
   max-height: 300px;
   overflow-y: auto;
-  display: none;
+  display: none; /* Hidden by default */
 }
 
 #results-container:not(:empty) {
-  display: block;
+  display: block; /* Show when there are results */
   border: 1px solid #e5e7eb;
 }
 
@@ -229,4 +239,20 @@ body:not(.home-page) .wrapper {
 #results-container a:hover {
   background-color: #f9fafb;
   color: #3b82f6;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .search-box {
+    margin: 0.5rem auto 1.5rem auto;
+  }
+  
+  .home-page .search-box {
+    margin: 1.5rem auto 1.5rem auto;
+  }
+  
+  .search-box input {
+    font-size: 0.9rem;
+    padding: 0.6rem 0.8rem;
+  }
 }
