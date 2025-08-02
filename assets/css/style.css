@@ -54,31 +54,50 @@ a:hover {
 }
 
 
-/* Breadcrumb styles */
+/* Modern breadcrumb with subtle styling */
+.breadcrumb-container {
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  border-bottom: 1px solid #dee2e6;
+  padding: 0.875rem 0;
+  margin-bottom: 1.5rem;
+}
+
 .breadcrumb {
   list-style: none;
   padding: 0;
-  margin: 1rem auto;  /* Changed: auto centers horizontally */
-  font-size: 0.9rem;
-  text-align: center;  /* Added: centers the text */
-  max-width: 780px;    /* Added: matches your wrapper width */
+  margin: 0 auto;
+  font-size: 0.875rem;
+  max-width: 780px;
+  display: flex;
+  align-items: center;
 }
 
 .breadcrumb li {
-  display: inline;
+  display: flex;
+  align-items: center;
 }
 
 .breadcrumb li + li:before {
-  content: " / ";
-  color: #666;
-  margin: 0 0.5rem;
+  content: "→";  /* or use "›" or "▶" */
+  color: #6c757d;
+  margin: 0 0.75rem;
+  font-size: 0.75rem;
 }
 
 .breadcrumb a {
   color: #0366d6;
   text-decoration: none;
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.25rem;
+  transition: background-color 0.15s ease;
 }
 
 .breadcrumb a:hover {
-  text-decoration: underline;
+  background-color: rgba(3, 102, 214, 0.1);
+  text-decoration: none;
+}
+
+.breadcrumb li:last-child {
+  color: #495057;
+  font-weight: 500;
 }
