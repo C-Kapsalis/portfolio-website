@@ -4,9 +4,15 @@
     
     {% comment %} Handle different page types intelligently {% endcomment %}
     {% if page.layout == 'post' or page.categories contains 'blog' or page.url contains '/blog/' %}
-      {% comment %} Blog post - show Home > Blog > Post Title {% endcomment %}
-      <li><a href="{{ site.baseurl }}/blog/">Blog</a></li>
-      <li aria-current="page">{{ page.title }}</li>
+      {% comment %} Handle blog - distinguish between listing and individual posts {% endcomment %}
+      {% if page.url == '/blog/' or page.url == '/blog/index.html' %}
+        {% comment %} Blog listing page {% endcomment %}
+        <li aria-current="page">Blog</li>
+      {% else %}
+        {% comment %} Individual blog post {% endcomment %}
+        <li><a href="{{ site.baseurl }}/blog/">Blog</a></li>
+        <li aria-current="page">{{ page.title }}</li>
+      {% endif %}
       
     {% elsif page.url contains '/projects/' %}
       {% comment %} Handle projects - distinguish between listing and individual projects {% endcomment %}
