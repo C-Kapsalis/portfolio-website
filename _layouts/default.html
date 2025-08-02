@@ -26,10 +26,13 @@
   {% include header.html %}
   {% include breadcrumbs.html %}
   <main class="wrapper">
-  	<div class="search-box">
- 		<input type="text" id="search-input" placeholder="Search..." />
-  		<ul id="results-container"></ul>
-	</div>
+	<!-- simple search feature -->
+	{% unless page.url == "/about/" or page.url == "/portfolio-website/about/" %}
+  		<div class="search-box">
+    		<input type="text" id="search-input" placeholder="Search..." />
+    		<ul id="results-container"></ul>
+  		</div>
+	{% endunless %}
 
     {{ content }}
   </main>
@@ -52,15 +55,26 @@
 <!-- simple search feature script -->
 <script src="https://unpkg.com/simple-jekyll-search/dest/simple-jekyll-search.min.js"></script>
 <script>
-  SimpleJekyllSearch({
-    searchInput: document.getElementById('search-input'),
-    resultsContainer: document.getElementById('results-container'),
-    json: '{{ "/search.json" | relative_url }}',
-    searchResultTemplate: '<li><a href="{url}">{title}</a></li>',
-    noResultsText: 'No results found.',
-    limit: 10,
-    fuzzy: false
-  });
+  const path = window.location.pathname;
+  let jsonPath = null;
+
+  if (path === '/' || path.startsWith('/portfolio') || path.startsWith('/portfolio-website/portfolio')) {
+    jsonPath = '{{ "/search-projects.json" | relative_url }}';
+  } else if (path.startsWith('/blog') || path.startsWith('/portfolio-website/blog')) {
+    jsonPath = '{{ "/search-posts.json" | relative_url }}';
+  }
+
+  if (jsonPath) {
+    SimpleJekyllSearch({
+      searchInput: document.getElementById('search-input'),
+      resultsContainer: document.getElementById('results-container'),
+      json: jsonPath,
+      searchResultTemplate: '<li><a href="{url}">{title}</a></li>',
+      noResultsText: 'No results found.',
+      limit: 10,
+      fuzzy: false
+    });
+  }
 </script>
 
 </body>
