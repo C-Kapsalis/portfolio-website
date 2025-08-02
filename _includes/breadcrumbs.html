@@ -1,34 +1,29 @@
 <nav aria-label="Breadcrumb" class="breadcrumb">
   <ol>
-    <li><a href="{{ '/' | relative_url }}">Home</a></li>
+    <li><a href="{{ site.baseurl }}/">Home</a></li>
     
-    {% comment %} Split the page URL and create breadcrumbs {% endcomment %}
-    {% assign crumbs = page.url | remove:'/index.html' | split: '/' %}
-    {% assign crumb_path = '' %}
-    
-    {% for crumb in crumbs offset: 1 %}
-      {% if forloop.last %}
-        {% comment %} Last item (current page) - not linked {% endcomment %}
-        <li aria-current="page">
-          {% if page.title %}
-            {{ page.title }}
-          {% else %}
-            {{ crumb | replace:'-',' ' | remove:'.html' | capitalize }}
-          {% endif %}
-        </li>
-      {% else %}
-        {% comment %} Intermediate crumbs - linked {% endcomment %}
-        {% assign crumb_path = crumb_path | append: '/' | append: crumb %}
-        <li>
-          <a href="{{ crumb_path | relative_url }}">
-            {% if crumb == 'blog' %}
-              Blog
-            {% else %}
-              {{ crumb | replace:'-',' ' | remove:'.html' | capitalize }}
-            {% endif %}
-          </a>
-        </li>
+    {% comment %} Handle different page types intelligently {% endcomment %}
+    {% if page.layout == 'post' or page.categories contains 'blog' or page.url contains '/blog/' %}
+      {% comment %} Blog post - show Home > Blog > Post Title {% endcomment %}
+      <li><a href="{{ site.baseurl }}/blog/">Blog</a></li>
+      <li aria-current="page">{{ page.title }}</li>
+      
+    {% elsif page.url contains '/projects/' %}
+      {% comment %} Projects - link back to main page, not /projects/ {% endcomment %}
+      <li aria-current="page">Projects</li>
+      
+    {% elsif page.url contains '/about' %}
+      {% comment %} About page {% endcomment %}
+      <li aria-current="page">About</li>
+      
+    {% else %}
+      {% comment %} Other pages - minimal breadcrumb {% endcomment %}
+      {% assign page_name = page.url | split: '/' | last | replace: '.html', '' | replace: '-', ' ' | capitalize %}
+      {% if page.title %}
+        <li aria-current="page">{{ page.title }}</li>
+      {% elsif page_name != '' %}
+        <li aria-current="page">{{ page_name }}</li>
       {% endif %}
-    {% endfor %}
+    {% endif %}
   </ol>
 </nav>
