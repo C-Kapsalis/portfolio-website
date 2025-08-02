@@ -29,7 +29,7 @@
 
 <!-- Simple search feature -->
 {% assign current_url = page.url | prepend: site.baseurl %}
-{% if page.url == "/blog/" or page.url contains "/blog/" or page.url == "/" or page.url contains "/projects/" %}
+{% if page.url == "/blog/" or page.url == "/" %}
   <div class="search-box">
     <input type="text" id="search-input" placeholder="Search..." />
     <ul id="results-container"></ul>
