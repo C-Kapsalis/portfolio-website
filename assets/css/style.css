@@ -126,11 +126,8 @@ a:hover {
 }
 
 /* Fix wrapper spacing - different for homepage vs other pages */
-.wrapper {
-  max-width: 780px;
-  margin: auto;
-  padding: 1.5rem;
-}
+.wrapper{max-width:780px;margin:auto;padding:1.5rem;display:flex;flex-direction:column}
+
 body:not(.home-page) .wrapper {
   padding-top: 0;
 }
@@ -170,42 +167,27 @@ body:not(.home-page) .wrapper {
 
 
 /* simple search feature styling */
+/* Position search box at the very top of wrapper content */
 .search-box {
+  order: -999; /* Move to top, before all other content */
   max-width: 600px;
+  margin: 0 auto 2rem auto !important; /* Stick to breadcrumbs */
   padding: 0 1rem;
-  margin: 1rem auto 2rem auto; /* Consistent spacing */
+  align-self: center; /* Center within the flex container */
 }
 
-/* Force consistent positioning regardless of page content */
+/* Remove any other search box positioning rules */
 .wrapper .search-box {
-  position: relative;
-  top: 0;
+  position: static !important;
+  top: auto !important;
+  margin-top: 0 !important;
 }
 
-/* Specific fix for homepage vs blog page */
-body.home-page .wrapper .search-box {
-  margin-top: 1rem !important; /* Same as blog page */
-}
-
+/* Override homepage/blog specific rules */
+body.home-page .wrapper .search-box,
 body:not(.home-page) .wrapper .search-box {
-  margin-top: 1rem !important; /* Consistent with homepage */
-}
-
-.search-box input {
-  width: 100%;
-  padding: 0.75rem 1rem;
-  border: 2px solid #e5e7eb;
-  border-radius: 8px;
-  font-size: 1rem;
-  background: white;
-  transition: border-color 0.2s ease;
-  box-sizing: border-box;
-}
-
-.search-box input:focus {
-  outline: none;
-  border-color: #3b82f6;
-  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+  margin-top: 0 !important;
+  order: -999;
 }
 
 #results-container {
