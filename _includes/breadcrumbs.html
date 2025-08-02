@@ -9,8 +9,15 @@
       <li aria-current="page">{{ page.title }}</li>
       
     {% elsif page.url contains '/projects/' %}
-      {% comment %} Projects - link back to main page, not /projects/ {% endcomment %}
-      <li aria-current="page">Projects</li>
+      {% comment %} Handle projects - distinguish between listing and individual projects {% endcomment %}
+      {% if page.url == '/projects/' or page.url == '/projects/index.html' %}
+        {% comment %} Projects listing page {% endcomment %}
+        <li aria-current="page">Projects</li>
+      {% else %}
+        {% comment %} Individual project page {% endcomment %}
+        <li><a href="{{ site.baseurl }}/#projects">Projects</a></li>
+        <li aria-current="page">{{ page.title }}</li>
+      {% endif %}
       
     {% elsif page.url contains '/about' %}
       {% comment %} About page {% endcomment %}
