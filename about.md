@@ -1,6 +1,8 @@
 ---
 layout: default
 title: About
+description: "Marketing Analytics specialist and Fulbright MSc Marketing candidate at Syracuse University with expertise in BI, Power BI, and data science"
+permalink: /about/
 ---
 
 ### Christoforos Kapsalis  
