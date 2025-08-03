@@ -1,8 +1,10 @@
 ---
 layout: blog
-title: "Blog"
+title: "Blog - Christoforos Kapsalis"
 description: "Insights on marketing analytics, data science, AI regulation, and business intelligence by Christoforos Kapsalis"
 permalink: /blog/
+author: "Christoforos Kapsalis"
+keywords: "Christoforos Kapsalis blog, marketing analytics blog, marketing data insights, business intelligence blog"
 ---
 
 <ul>

@@ -3,6 +3,7 @@ layout: default
 title: About
 description: "Marketing Analytics specialist and Fulbright MSc Marketing candidate at Syracuse University with expertise in BI, Power BI, and data science"
 keywords: "christoforos kapsalis, marketing engineer cv, marketing analytics professional, business intelligence, greek fulbright grantee, syracuse university graduate student, data science greece"
+author: "Christoforos Kapsalis"
 permalink: /about/
 ---
 
